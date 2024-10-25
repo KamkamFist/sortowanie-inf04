@@ -16,30 +16,37 @@
     }
     public void sortujTablice()
     {
-        WyszukajMinimum();
-    }
-    private void WyszukajMinimum()
-    {
-        for(int i = 0; i < liczby.Length; i++)
+        for (int i = 0; i < liczby.Length; i++)
         {
-            int min = i;
-            int obecnaLiczba = liczby[i];
-            for(int j = i + 1; j < liczby.Length; j++){
 
-                if (liczby[j] < obecnaLiczba)
-                {
-                    min = j;
-                }
+            int min = WyszukajMaximum(i);
 
-            }
 
-            int temp = obecnaLiczba;
+            int temp = liczby[i];
             liczby[i] = liczby[min];
-            liczby[i] = temp;
+            liczby[min] = temp;
 
         }
-
     }
+
+
+
+    private int WyszukajMaximum(int i)
+    {
+
+            int min = i;
+
+            for (int j = i + 1; j < liczby.Length; j++)
+            {
+                if (liczby[j] < liczby[min])
+                    min = j;
+            }
+
+        return min;
+        }
+
+
+    
 }
 class zadanie 
 {
