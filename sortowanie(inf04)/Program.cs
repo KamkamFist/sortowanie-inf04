@@ -14,6 +14,12 @@
         }
         Console.Write(" ]");
     }
+    /****************************************************
+     * nazwa funkcji: sortujTablice
+     * parametry wejściowe: brak - dziala w obrębie tablicy liczby
+     * parametry wyjściowe: brak - sortuje tablice liczby rosnąco
+     * autor: 28346237664
+     * ****************************************************/
     public void sortujTablice()
     {
         for (int i = 0; i < liczby.Length; i++)
@@ -30,7 +36,12 @@
     }
 
 
-
+    /***************************************************
+    * nazwa funkcji: WyszukajMaximum
+    * parametry wejściowe: int i - indeks od którego zaczynamy szukać
+    * wartość zwracana: int - indeks najmniejszej wartości w tablicy od indeksu i do końca tablicy
+    * autor: 28346237664
+    * ***************************************************/
     private int WyszukajMaximum(int i)
     {
 
